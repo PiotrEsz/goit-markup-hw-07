@@ -1,105 +1,76 @@
-.footer__logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--hover-focus);
-  padding: 24px 0 24px;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.footer {
+  background-color: $section-background-color;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.footer__address {
+  @include font-atr(400, 1.71, 0.03em);
+  @include set-flex(column, flex-start, stretch);
+  row-gap: 9px;
+  width: 246px;
   margin: 0;
-  &--recolor {
-    color: var(--white);
-    margin-right: 100px;
-  }
 }
 
-.footer__mail {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--WhiteTransparent);
-  &:hover,
-  &:focus {
-    color: var(--hover-focus);
-    transition: 0, 4s;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: underline;
-  }
-}
-.footer__phone {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--WhiteTransparent);
-  &:hover,
-  &:focus {
-    color: var(--hover-focus);
-    transition: 0, 4s;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.footer__location {
+  @include font-atr(400, 1.71, 0.03em);
+  color: $primary-background-color;
+  margin: 20px 0 0 0;
 }
 
-.footer__box-socials {
-  margin-top: 12px;
-  &--position {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
+.footer__link {
+  color: $footer-link-color;
+}
+
+.footer__heading {
+  @include font-atr(700, 1.14, 0.03em);
+  font-size: get-size('footer');
+  text-transform: uppercase;
+  color: $primary-background-color;
+  margin-bottom: 20px;
+}
+
+.footer__container {
+  @include set-flex(row, flex-start, baseline);
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__contacts {
+  margin-right: 70px;
+}
+
+.footer__socials {
+  margin-right: 78px;
+}
+
+.footer__icons {
+  gap: 10px;
+  width: 44px;
+  height: 44px;
 }
 
 .footer__input {
-  height: 50px;
   width: 358px;
-  padding: 15px;
+  height: 50px;
+  padding: 15px 0 15px 16px;
+  background-color: $section-background-color;
+  border: 1px solid $footer-input-color;
+  filter: drop-shadow(0px 4px 4px $footer-shadow-color);
   border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: 0.2s;
-  &:hover,
-  &:active,
-  &:focus {
-    border: 1px solid var(--hover-focus);
-    box-shadow: none;
-    outline: none;
-    color: var(--white);
-    transition: 0.2s;
-  }
+  color: $footer-link-color;
+  margin-right: 10px;
+  outline: none;
 }
-.footer__heading {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--white);
-  position: relative;
+
+.footer .icon {
+  background-color: $footer-icon-background;
+  border-radius: 50%;
+  fill: $primary-background-color;
 }
-.footer__social-heading {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: start;
-  color: var(--button);
-  margin-bottom: 20px;
-}
-.footer--background-color {
-  background: var(--background);
-}
-.footer__adress-details {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  color: var(--white);
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 9px;
+
+.footer .icon:hover {
+  background-color: $button-icon-color;
+  border-radius: 50%;
+  fill: $primary-background-color;
 }
